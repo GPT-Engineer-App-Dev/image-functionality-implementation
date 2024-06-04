@@ -28,13 +28,13 @@ const Index = () => {
     <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
       <VStack spacing={4}>
         <Image src="/images/stopwatch-design.png" alt="Stopwatch Design" boxSize="150px" />
-        <Box bg="black" color="lime" p={4} borderRadius="md" fontSize="3xl" fontFamily="monospace">
+        <Box bg="brand.900" color="brand.600" p={4} borderRadius="md" fontSize="3xl" fontFamily="monospace">
           {formatTime(time)}
         </Box>
-        <Button colorScheme="teal" onClick={() => setRunning(!running)}>
+        <Button colorScheme={running ? "brand.500" : "brand.800"} onClick={() => setRunning(!running)}>
           {running ? "Stop" : "Start"}
         </Button>
-        <Button colorScheme="red" onClick={() => { setTime(0); setRunning(false); }}>
+        <Button colorScheme="brand.600" onClick={() => { setTime(0); setRunning(false); }}>
           Reset
         </Button>
       </VStack>
